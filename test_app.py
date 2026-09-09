@@ -1,10 +1,10 @@
 import pytest
+
 from app import app, tasks
 
 
 @pytest.fixture()
 def client():
-    # Clear tasks before each test
     tasks.clear()
     app.config["TESTING"] = True
     with app.test_client() as c:
