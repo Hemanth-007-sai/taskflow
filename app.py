@@ -63,7 +63,7 @@ def count_request(response):
 
 @app.get("/health")
 def health():
-    return jsonify(status="ok"), 200
+    return jsonify(status="ok", message="hello gitam"), 200
 
 
 @app.post("/tasks")
